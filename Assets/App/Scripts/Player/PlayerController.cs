@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterControler : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("params")]
     [SerializeField] float moveFactor;
