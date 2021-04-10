@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MoveCharacter(Vector3 position, MovmentType moveType)
     {
         //animator.SetTrigger(Enum.GetName(typeof(MovmentType), moveType));
+        animator.SetTrigger("walk");
         transform.DOMove(position, moveDuration).SetEase(Ease.OutCubic);
         yield return new WaitForSeconds(moveDuration);
     }
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Manager.Instance.preview == true)
             return;
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "Ennemy")
         {
             // TODO: Implement Game Over
             Manager.Instance.Gameover();

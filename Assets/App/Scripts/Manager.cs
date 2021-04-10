@@ -142,6 +142,7 @@ public class Manager : MonoBehaviour
     internal void Gameover()
     {
         Debug.Log("Game Over");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public bool soclesAllActives()
