@@ -4,25 +4,5 @@ using UnityEngine;
 
 public class Socles : MonoBehaviour
 {
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Action")
-        {
-            other.transform.position = transform.position;
-        }
-    }
+    public bool isTaken = false; 
 }

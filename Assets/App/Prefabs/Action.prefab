@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5548204915737312079}
   - component: {fileID: 5548204915737312078}
   - component: {fileID: 5548204915737312073}
-  m_Layer: 0
+  - component: {fileID: 4796020798532675399}
+  m_Layer: 8
   m_Name: Action
   m_TagString: Action
   m_Icon: {fileID: 0}
@@ -129,5 +130,17 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4796020798532675399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548204915737312114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960117612c0b6014d8ba4a9ee7d340b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
