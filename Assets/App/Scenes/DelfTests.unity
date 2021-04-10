@@ -210,7 +210,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5749101501636120807}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5749101501636120808}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b8f810f41df39843925115fd419be72, type: 3}
@@ -448,12 +448,12 @@ PrefabInstance:
     - target: {fileID: 5702723862222605194, guid: d5c0983101f4a7548b4b08a25dddc5fc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3968554
+      value: 7.35
       objectReference: {fileID: 0}
     - target: {fileID: 5702723862222605194, guid: d5c0983101f4a7548b4b08a25dddc5fc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.95771396
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 5702723862222605194, guid: d5c0983101f4a7548b4b08a25dddc5fc,
         type: 3}
@@ -509,6 +509,81 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].time
+      value: 0.15642035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].value
+      value: 0.014064863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].inSlope
+      value: 0.35670725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].outSlope
+      value: 0.35670725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[2].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: moveAnim.m_Curve.Array.data[2].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749101502809713874, guid: 95514d7e82f0fb945884cd0c82102213,
+        type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5749101502809713875, guid: 95514d7e82f0fb945884cd0c82102213,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -581,3 +656,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95514d7e82f0fb945884cd0c82102213, type: 3}
+--- !u!1 &5749101501636120808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749101502809713877, guid: 95514d7e82f0fb945884cd0c82102213,
+    type: 3}
+  m_PrefabInstance: {fileID: 5749101501636120807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5749101501636120809
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749101501636120808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d32ab69e5bd04f42ba05735c512caa0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

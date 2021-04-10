@@ -1,13 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("params")]
     [SerializeField] float moveFactor;
+    [SerializeField] protected float moveDuration;
+    [SerializeField] protected AnimationCurve moveAnim;
     [SerializeField] protected LayerMask wallLayer;
     [SerializeField] protected float raycastWallDist;
+
+    private Animator animator;
+    private Coroutine moving;
+
+
+    private void OnEnable()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void Move(MovmentType moveType)
     {
@@ -32,7 +45,7 @@ public class PlayerController : MonoBehaviour
         }
         if (CanMove(dir))
         {
-            transform.position += dir * moveFactor;
+            MoveToPosition(transform.position + (dir * moveFactor), moveType);
         }
     }
 
@@ -41,7 +54,22 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         return !Physics.Raycast(transform.position, dir, out hit, raycastWallDist, wallLayer);
     }
+    
+    private void MoveToPosition(Vector3 position, MovmentType moveType)
+    {
+        if (position != null)
+        {
+            moving = StartCoroutine(MoveCharacter(position, moveType));
+        }
+    }
 
+    private IEnumerator MoveCharacter(Vector3 position, MovmentType moveType)
+    {
+        animator.SetTrigger(Enum.GetName(typeof(MovmentType), moveType));
+        transform.DOMove(position, moveDuration).SetEase(Ease.OutCubic);
+        yield return new WaitForSeconds(moveDuration);
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "enemy")
