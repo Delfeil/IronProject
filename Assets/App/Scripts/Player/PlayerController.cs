@@ -6,16 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [Header("params")]
     [SerializeField] float moveFactor;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    [SerializeField] protected LayerMask wallLayer;
+    [SerializeField] protected float raycastWallDist;
 
     public void Move(MovmentType moveType)
     {
@@ -38,6 +30,29 @@ public class PlayerController : MonoBehaviour
                 return;
                 break;
         }
-        transform.position += dir * moveFactor;
+        if (CanMove(dir))
+        {
+            transform.position += dir * moveFactor;
+        }
+    }
+
+    protected bool CanMove(Vector3 dir)
+    {
+        RaycastHit hit;
+        return !Physics.Raycast(transform.position, dir, out hit, raycastWallDist, wallLayer);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            // TODO: Implement Game Over
+            Debug.Log("Game Over");
+        }
+        else if (other.gameObject.tag == "victory")
+        {
+            // TODO: Implement Victory
+            Debug.Log("Vicrtory");
+        }
     }
 }

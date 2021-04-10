@@ -44,8 +44,7 @@ public class ActionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collide: {other.gameObject.tag}");  
-        if (other.gameObject.tag == "Actionneur")
+        if (other.gameObject.tag == "enemy")
         {
             player.Move(this.movmentType);
         }
