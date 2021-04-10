@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Manager.Instance.preview == true)
             return;
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "Ennemy")
         {
             // TODO: Implement Game Over
             Manager.Instance.Gameover();
