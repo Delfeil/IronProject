@@ -8,6 +8,17 @@ public class DragObject : MonoBehaviour
 
     private float mZCoord;
 
+    public Vector3 startpos;
+
+    public bool isOnSocle = false;
+
+    public Vector3 posSocle; 
+
+    private void Start()
+    {
+        startpos = transform.position;
+    }
+
     void OnMouseDown()
 
     {
@@ -18,7 +29,6 @@ public class DragObject : MonoBehaviour
         // Store offset = gameobject world pos - mouse world pos
 
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
-
     }
 
     private Vector3 GetMouseAsWorldPoint()
@@ -41,4 +51,12 @@ public class DragObject : MonoBehaviour
         transform.position = GetMouseAsWorldPoint() + mOffset;
     }
 
+    private void OnMouseUp()
+    {
+        if (isOnSocle)
+        {
+            transform.position = new Vector3(posSocle.x, posSocle.y, -0.001f);
+        }
+        else { transform.position = startpos; }
+    }
 }
