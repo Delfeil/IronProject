@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingGameObject: {fileID: 0}
   currentGameObject: {fileID: 0}
-  moveSpeed: 0.02
+  moveSpeed: 3
 --- !u!65 &6000388972244618273
 BoxCollider:
   m_ObjectHideFlags: 0

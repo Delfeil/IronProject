@@ -30,14 +30,14 @@ public class Ennemy : MonoBehaviour
         {
             //Aller au currentObjectPosition
             Vector3 deplacement = currentGameObject.transform.position - transform.position;
-            transform.position += deplacement.normalized * moveSpeed;
+            transform.position += deplacement.normalized * moveSpeed *Time.deltaTime;
         }
     }
 
     void stopButtonFunction()
     {
         canMove = false;
-        transform.position = StartingGameObject.transform.position + offset;
+        transform.position = StartingGameObject.transform.position;
         currentGameObject = StartingGameObject;
         Debug.Log("Stop Function");
     }

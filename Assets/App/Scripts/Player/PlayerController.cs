@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         //sizeCollider = Manager.Instance.sizeWallCollider;
         moveFactor = sizeCollider;
         startingPos = transform.position;
+        transform.localScale = new Vector3(0.18f, 0.18f, 0.18f);
     }
 
     private void OnEnable()
