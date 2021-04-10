@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MoveCharacter(Vector3 position, MovmentType moveType)
     {
         //animator.SetTrigger(Enum.GetName(typeof(MovmentType), moveType));
+        animator.SetTrigger("walk");
         transform.DOMove(position, moveDuration).SetEase(Ease.OutCubic);
         yield return new WaitForSeconds(moveDuration);
     }
