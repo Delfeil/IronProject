@@ -99,12 +99,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             // TODO: Implement Game Over
-            Debug.Log("Game Over");
+            Manager.Instance.Gameover();
         }
         else if (other.gameObject.tag == "victory")
         {
             // TODO: Implement Victory
-            Debug.Log("Vicrtory");
+            Manager.Instance.Victory();
         }
     }
 }

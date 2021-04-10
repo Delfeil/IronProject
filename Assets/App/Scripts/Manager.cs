@@ -93,4 +93,14 @@ public class Manager : MonoBehaviour
         }
 
     }
+
+    internal void Victory()
+    {
+        Debug.Log("Vicrtory");
+    }
+
+    internal void Gameover()
+    {
+        Debug.Log("Game Over");
+    }
 }
