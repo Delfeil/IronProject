@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        if (Manager.Instance.preview == true)
+            return;
         if (other.gameObject.tag == "enemy")
         {
             // TODO: Implement Game Over

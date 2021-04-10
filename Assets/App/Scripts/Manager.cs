@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.SceneManagement;
 
 
 public class Manager : MonoBehaviour
@@ -26,6 +27,12 @@ public class Manager : MonoBehaviour
 
     private float marge = 0.01f;
 
+    public bool preview;
+
+    [Header("UI")]
+    [SerializeField] GameObject uiVictory;
+    [SerializeField] float victoryDisplayTime;
+    private Coroutine victory;
 
     private void Awake() //Make this a singleton
     {
@@ -41,6 +48,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        preview = true;
         wallCollider = walls.GetComponent<BoxCollider>();
         sizeWallCollider = wallCollider.bounds.size.x;
         //posFirstBrick += new Vector3(wallCollider.bounds.size.x / 2, wallCollider.bounds.size.x / 2, 0);
@@ -48,8 +56,16 @@ public class Manager : MonoBehaviour
         InstantiateLevel();
     }
 
+    public void Preview()
+    {
+        preview = true;
+        Play?.Invoke();
+        Debug.Log("Preview Launch");
+    }
+
     public void Starting()
     {
+        preview = false;
         Play?.Invoke();
         Debug.Log("StartSignal Launch");
     }
@@ -57,6 +73,11 @@ public class Manager : MonoBehaviour
     {
         Stop?.Invoke();
         Debug.Log("StopSignal Launch");
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void InstantiateLevel()
@@ -96,7 +117,15 @@ public class Manager : MonoBehaviour
 
     internal void Victory()
     {
-        Debug.Log("Vicrtory");
+        Debug.Log("VICTORY");
+        victory = StartCoroutine(displayVictoryScreen());
+    }
+
+    public IEnumerator displayVictoryScreen()
+    {
+        uiVictory.SetActive(true);
+        yield return new WaitForSeconds(victoryDisplayTime);
+        SceneManager.LoadScene(0);
     }
 
     internal void Gameover()

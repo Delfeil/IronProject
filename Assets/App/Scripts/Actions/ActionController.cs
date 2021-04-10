@@ -48,7 +48,7 @@ public class ActionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Ennemy")
+        if (other.gameObject.tag == "Ennemy" && Manager.Instance.preview == false)
         {
             player.Move(this.movmentType);
         }
