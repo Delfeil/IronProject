@@ -19,8 +19,8 @@ public class Ennemy : MonoBehaviour
     {
         currentGameObject = StartingGameObject;
         transform.position = currentGameObject.transform.position + offset;
-        Shop.Instance.Play += playButtonFunction;
-        Shop.Instance.Stop += stopButtonFunction;
+        Manager.Instance.Play += playButtonFunction;
+        Manager.Instance.Stop += stopButtonFunction;
     }
 
     // Update is called once per frame

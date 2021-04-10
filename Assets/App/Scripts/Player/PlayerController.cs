@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
 
     [Header("params")]
-    [SerializeField] float moveFactor;
+    /*[SerializeField] float moveFactor;*/
+    private float moveFactor;
     [SerializeField] protected float moveDuration;
     [SerializeField] protected AnimationCurve moveAnim;
     [SerializeField] protected LayerMask wallLayer;
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private Coroutine moving;
+
+    private Collider ownCOllider;
+    private float sizeCollider;
 
     private void Awake() //Make this a singleton
     {
@@ -28,6 +32,13 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        ownCOllider = GetComponent<BoxCollider>();
+        sizeCollider = ownCOllider.bounds.size.x;
+        moveFactor = sizeCollider;
     }
 
     private void OnEnable()
