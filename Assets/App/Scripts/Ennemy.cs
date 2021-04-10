@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,13 +15,26 @@ public class Ennemy : MonoBehaviour
 
     private Vector3 offset = new Vector3(-1,0,0);
 
-    // Start is called before the first frame update
+    Animator animator;
+
+    private void OnEnable()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("IDLE");
+    }
+
     void Start()
     {
         currentGameObject = StartingGameObject;
         transform.position = currentGameObject.transform.position;
         Manager.Instance.Play += playButtonFunction;
         Manager.Instance.Stop += stopButtonFunction;
+    }
+
+    private void OnDisable()
+    {
+        Manager.Instance.Play -= playButtonFunction;
+        Manager.Instance.Stop -= stopButtonFunction;
     }
 
     // Update is called once per frame
@@ -34,17 +48,24 @@ public class Ennemy : MonoBehaviour
         }
     }
 
+    public void SetAnimation(MovmentType moveType)
+    {
+        animator.SetTrigger(Enum.GetName(typeof(MovmentType), moveType));
+    }
+
     void stopButtonFunction()
     {
         canMove = false;
         transform.position = StartingGameObject.transform.position;
         currentGameObject = StartingGameObject;
+        animator.SetTrigger("IDLE");
         Debug.Log("Stop Function");
     }
 
     void playButtonFunction()
     {
         canMove = true;
+        animator.SetTrigger("MOVE");
         Debug.Log("Play Function");
     }
 }
