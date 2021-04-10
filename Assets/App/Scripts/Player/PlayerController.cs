@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         ownCOllider = GetComponent<BoxCollider>();
         sizeCollider = ownCOllider.bounds.size.x;
+        //sizeCollider = Manager.Instance.sizeWallCollider;
         moveFactor = sizeCollider;
         startingPos = transform.position;
     }

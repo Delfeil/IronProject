@@ -25,7 +25,7 @@ public class Manager : MonoBehaviour
     [SerializeField]Vector3 posFirstBrick = new Vector3(0,0,0);
     Vector3 currentPos;
     private Collider wallCollider;
-    private float sizeWallCollider;
+    public float sizeWallCollider;
 
     private float marge = 0.01f;
 
