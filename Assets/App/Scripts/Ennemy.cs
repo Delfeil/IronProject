@@ -18,7 +18,7 @@ public class Ennemy : MonoBehaviour
     void Start()
     {
         currentGameObject = StartingGameObject;
-        transform.position = currentGameObject.transform.position + offset;
+        transform.position = currentGameObject.transform.position;
         Manager.Instance.Play += playButtonFunction;
         Manager.Instance.Stop += stopButtonFunction;
     }
