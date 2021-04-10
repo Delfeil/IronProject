@@ -211,6 +211,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 922548212}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &742034490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 20322672095519744, guid: 1125986ac608b9d4c8b94b63fba09658,
+    type: 3}
+  m_PrefabInstance: {fileID: 20322671637051083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &763629010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5698580814344838496, guid: 47892d63e6046104dbb7fbd005d00931,
@@ -400,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 5749101502809713875, guid: 95514d7e82f0fb945884cd0c82102213,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5749101502809713875, guid: 95514d7e82f0fb945884cd0c82102213,
         type: 3}
@@ -1276,6 +1282,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4700777475944391050, guid: db2efee73a6fd0d4e85093eb88a61b70,
         type: 3}
+    - target: {fileID: 20322671234190718, guid: 1125986ac608b9d4c8b94b63fba09658,
+        type: 3}
+      propertyPath: uiStopButton
+      value: 
+      objectReference: {fileID: 742034490}
     - target: {fileID: 20322671234190719, guid: 1125986ac608b9d4c8b94b63fba09658,
         type: 3}
       propertyPath: m_Name
@@ -1368,12 +1379,12 @@ PrefabInstance:
     - target: {fileID: 6000388972244618278, guid: 5cfbf091df0b73645a7f0b390f20ec78,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.65
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 6000388972244618278, guid: 5cfbf091df0b73645a7f0b390f20ec78,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.12
+      value: 1.81
       objectReference: {fileID: 0}
     - target: {fileID: 6000388972244618278, guid: 5cfbf091df0b73645a7f0b390f20ec78,
         type: 3}

@@ -42,7 +42,9 @@ public class Manager : MonoBehaviour
 
     public GameObject uiPlayButton;
     [SerializeField] GameObject uiPreviewButton;
+    [SerializeField] GameObject uiStopButton;
     ActionController[] arrayAllActions;
+    PointPassage[] arrayPointsPassage;
 
 
     private void Awake() //Make this a singleton
@@ -67,10 +69,23 @@ public class Manager : MonoBehaviour
         uiPlayButton.SetActive(false);
         socleArray = FindObjectsOfType<Socles>();
         arrayAllActions = FindObjectsOfType<ActionController>();
+        arrayPointsPassage = FindObjectsOfType<PointPassage>();
+        hidePointsPassages();
+        uiStopButton.SetActive(false);
+    }
+
+    public void hidePointsPassages()
+    {
+        foreach (var points in arrayPointsPassage)
+        {
+            MeshRenderer meshrend = points.gameObject.GetComponent<MeshRenderer>();
+            meshrend.enabled = false;
+        }
     }
 
     public void Preview()
     {
+        uiStopButton.SetActive(true);
         uiPlayButton.SetActive(false);
         uiPreviewButton.SetActive(false);
         desactiveAllActions();
@@ -114,6 +129,7 @@ public class Manager : MonoBehaviour
     {
         if (soclesAllActives())
         {
+            uiStopButton.SetActive(true);
             uiPreviewButton.SetActive(false);
             uiPlayButton.SetActive(false);
             enableDragDropOnAllActions();
@@ -128,6 +144,7 @@ public class Manager : MonoBehaviour
     }
     public void Stopping()
     {
+        uiStopButton.SetActive(false);
         uiPreviewButton.SetActive(true);
         PlayerController.Instance.replacePlayerInitialPos();
         ableDragDropOnAllActions();
