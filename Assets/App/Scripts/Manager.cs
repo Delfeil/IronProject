@@ -26,6 +26,8 @@ public class Manager : MonoBehaviour
 
     private float marge = 0.01f;
 
+    private Socles[] socleArray;
+
 
     private void Awake() //Make this a singleton
     {
@@ -46,6 +48,8 @@ public class Manager : MonoBehaviour
         //posFirstBrick += new Vector3(wallCollider.bounds.size.x / 2, wallCollider.bounds.size.x / 2, 0);
         currentPos = posFirstBrick;
         InstantiateLevel();
+
+        socleArray = FindObjectsOfType<Socles>();
     }
 
     public void Starting()
@@ -96,11 +100,23 @@ public class Manager : MonoBehaviour
 
     internal void Victory()
     {
-        Debug.Log("Vicrtory");
+        Debug.Log("Victory");
     }
 
     internal void Gameover()
     {
         Debug.Log("Game Over");
+    }
+
+    public bool soclesAllActives()
+    {
+        foreach (var socles in socleArray)
+        {
+            if (!socles.isActive)
+            {
+                break;
+            }
+        }     
+        return true;
     }
 }

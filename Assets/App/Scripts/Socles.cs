@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Socles : MonoBehaviour
 {
-    public bool isTaken = false;
+    public bool isActive = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +14,7 @@ public class Socles : MonoBehaviour
             dragobj.isOnSocle = true;
             dragobj.posSocle = transform.position;
             Debug.Log("ENTRE DANS LE SOCLE");
+            isActive = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -24,6 +25,7 @@ public class Socles : MonoBehaviour
             dragobj.isOnSocle = false;
             dragobj.posSocle = dragobj.startpos;
             Debug.Log("QUITTE LE SOCLE");
+            isActive = false;
         }
     }
 }
