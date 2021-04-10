@@ -1,20 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("params")]
     [SerializeField] float moveFactor;
+    [SerializeField] protected float moveDuration;
+    [SerializeField] protected AnimationCurve moveAnim;
+    [SerializeField] protected LayerMask wallLayer;
+    [SerializeField] protected float raycastWallDist;
 
-    void Start()
-    {
-        
-    }
+    private Animator animator;
+    private Coroutine moving;
 
-    void Update()
+
+    private void OnEnable()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     public void Move(MovmentType moveType)
@@ -38,6 +43,44 @@ public class PlayerController : MonoBehaviour
                 return;
                 break;
         }
-        transform.position += dir * moveFactor;
+        if (CanMove(dir))
+        {
+            MoveToPosition(transform.position + (dir * moveFactor), moveType);
+        }
+    }
+
+    protected bool CanMove(Vector3 dir)
+    {
+        RaycastHit hit;
+        return !Physics.Raycast(transform.position, dir, out hit, raycastWallDist, wallLayer);
+    }
+    
+    private void MoveToPosition(Vector3 position, MovmentType moveType)
+    {
+        if (position != null)
+        {
+            moving = StartCoroutine(MoveCharacter(position, moveType));
+        }
+    }
+
+    private IEnumerator MoveCharacter(Vector3 position, MovmentType moveType)
+    {
+        animator.SetTrigger(Enum.GetName(typeof(MovmentType), moveType));
+        transform.DOMove(position, moveDuration).SetEase(Ease.OutCubic);
+        yield return new WaitForSeconds(moveDuration);
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            // TODO: Implement Game Over
+            Debug.Log("Game Over");
+        }
+        else if (other.gameObject.tag == "victory")
+        {
+            // TODO: Implement Victory
+            Debug.Log("Vicrtory");
+        }
     }
 }

@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Actionneur
-  - Action
-  - Socle
+  - enemy
+  - victory
   - Ennemy
+  - Action
+  - Undefined
+  - Socle
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
+  - Wall
+  - Player
   - Action
-  - Socle
-  - 
   - 
   - 
   - 
