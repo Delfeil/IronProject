@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.SceneManagement;
 
 
 public class Manager : MonoBehaviour
@@ -26,6 +27,12 @@ public class Manager : MonoBehaviour
 
     private float marge = 0.01f;
 
+    public bool preview;
+
+    [Header("UI")]
+    [SerializeField] GameObject uiVictory;
+    [SerializeField] float victoryDisplayTime;
+    private Coroutine victory;
     private Socles[] socleArray;
 
 
@@ -43,6 +50,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        preview = true;
         wallCollider = walls.GetComponent<BoxCollider>();
         sizeWallCollider = wallCollider.bounds.size.x;
         //posFirstBrick += new Vector3(wallCollider.bounds.size.x / 2, wallCollider.bounds.size.x / 2, 0);
@@ -52,15 +60,35 @@ public class Manager : MonoBehaviour
         socleArray = FindObjectsOfType<Socles>();
     }
 
+    public void Preview()
+    {
+        preview = true;
+        Play?.Invoke();
+        Debug.Log("Preview Launch");
+    }
+
     public void Starting()
     {
-        Play?.Invoke();
-        Debug.Log("StartSignal Launch");
+        if (soclesAllActives())
+        {
+            preview = false;
+            Play?.Invoke();
+            Debug.Log("StartSignal Launch");
+        }
+        else
+        {
+            Debug.Log("Les socles ne sont pas tous actifs ! ");
+        }
     }
     public void Stopping()
     {
         Stop?.Invoke();
         Debug.Log("StopSignal Launch");
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void InstantiateLevel()
@@ -100,7 +128,15 @@ public class Manager : MonoBehaviour
 
     internal void Victory()
     {
-        Debug.Log("Victory");
+        Debug.Log("VICTORY");
+        victory = StartCoroutine(displayVictoryScreen());
+    }
+
+    public IEnumerator displayVictoryScreen()
+    {
+        uiVictory.SetActive(true);
+        yield return new WaitForSeconds(victoryDisplayTime);
+        SceneManager.LoadScene(0);
     }
 
     internal void Gameover()
@@ -110,13 +146,21 @@ public class Manager : MonoBehaviour
 
     public bool soclesAllActives()
     {
+        int nbLenght = socleArray.Length;
+        int count = 0;
+
         foreach (var socles in socleArray)
         {
-            if (!socles.isActive)
+            if (socles.isActive)
             {
-                break;
+                count += 1;
             }
         }     
-        return true;
+        if(count == nbLenght)
+        {
+            return true;
+        }
+        return false;
+        count = 0;
     }
 }
