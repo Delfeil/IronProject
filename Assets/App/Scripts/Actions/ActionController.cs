@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActionController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] PlayerController player;
+    private PlayerController player;
     protected SpriteRenderer spriteRenderer;
 
     [Header("Properties")]
@@ -17,6 +17,10 @@ public class ActionController : MonoBehaviour
     [SerializeField] protected Sprite leftSprite;
     [SerializeField] protected Sprite rightSprite;
 
+    private void Start()
+    {
+        player = PlayerController.Instance;
+    }
     private void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

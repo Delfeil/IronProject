@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     [Header("params")]
     [SerializeField] float moveFactor;
     [SerializeField] protected float moveDuration;
@@ -16,6 +18,17 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Coroutine moving;
 
+    private void Awake() //Make this a singleton
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnEnable()
     {
