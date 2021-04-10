@@ -1,0 +1,380 @@
+fileFormatVersion: 2
+guid: 09118ea5d89e3a44da8da9dca22b02bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5853093364575629660
+    second: "m\xE9chant-de-dos_0"
+  - first:
+      213: -615118898235083679
+    second: "m\xE9chant-de-dos_1"
+  - first:
+      213: 2955822857639359773
+    second: "m\xE9chant-de-dos_2"
+  - first:
+      213: -4330541415470774208
+    second: "m\xE9chant-de-dos_3"
+  - first:
+      213: 161096461232764151
+    second: "m\xE9chant-de-dos_4"
+  - first:
+      213: -3069850297664420777
+    second: "m\xE9chant-de-dos_5"
+  - first:
+      213: -7280692296673110481
+    second: "m\xE9chant-de-dos_6"
+  - first:
+      213: -3241853594159957954
+    second: "m\xE9chant-de-dos_7"
+  - first:
+      213: -4843566704521431835
+    second: "m\xE9chant-de-dos_8"
+  - first:
+      213: -8924309892813684110
+    second: "m\xE9chant-de-dos_9"
+  - first:
+      213: 6529518753318338102
+    second: "m\xE9chant-de-dos_10"
+  - first:
+      213: 3177203189794825402
+    second: "m\xE9chant-de-dos_11"
+  - first:
+      213: -5623093540032334080
+    second: "m\xE9chant-de-dos_12"
+  - first:
+      213: -9078262833588355193
+    second: "m\xE9chant-de-dos_13"
+  - first:
+      213: 4842138568450619211
+    second: "m\xE9chant-de-dos_14"
+  - first:
+      213: 7038482395239311927
+    second: "m\xE9chant-de-dos_15"
+  - first:
+      213: 5936968318457806900
+    second: "m\xE9chant-de-dos_16"
+  - first:
+      213: 601211422152414208
+    second: "m\xE9chant-de-dos_17"
+  - first:
+      213: -545642065732033968
+    second: "m\xE9chant-de-dos_18"
+  - first:
+      213: 643969818375466338
+    second: "m\xE9chant-de-dos_19"
+  - first:
+      213: 8212902560086974416
+    second: "m\xE9chant-de-dos_20"
+  - first:
+      213: -2168932578085160139
+    second: "m\xE9chant-de-dos_21"
+  - first:
+      213: -6410343930329736850
+    second: "m\xE9chant-de-dos_22"
+  - first:
+      213: -8575551635555497824
+    second: "m\xE9chant-de-dos_23"
+  - first:
+      213: -8477691327779271620
+    second: "m\xE9chant-de-dos_24"
+  - first:
+      213: -6757517599675357132
+    second: "m\xE9chant-de-dos_25"
+  - first:
+      213: -4027177088068376538
+    second: "m\xE9chant-de-dos_26"
+  - first:
+      213: -1353898855140209338
+    second: "m\xE9chant-de-dos_27"
+  - first:
+      213: -1599438578168427915
+    second: "m\xE9chant-de-dos_28"
+  - first:
+      213: -5162247819039779691
+    second: "m\xE9chant-de-dos_29"
+  - first:
+      213: -2751316065784395780
+    second: "m\xE9chant-de-dos_30"
+  - first:
+      213: -2966337178217275228
+    second: "m\xE9chant-de-dos_31"
+  - first:
+      213: 660516572267609089
+    second: "m\xE9chant-de-dos_32"
+  - first:
+      213: -2301703022788110769
+    second: "m\xE9chant-de-dos_33"
+  - first:
+      213: 7390716248606567167
+    second: "m\xE9chant-de-dos_34"
+  - first:
+      213: -6037139597633603323
+    second: "m\xE9chant-de-dos_35"
+  - first:
+      213: 4050301601842443571
+    second: "m\xE9chant-de-dos_36"
+  - first:
+      213: 4565390114985462537
+    second: "m\xE9chant-de-dos_37"
+  - first:
+      213: -5943006475970030920
+    second: "m\xE9chant-de-dos_38"
+  - first:
+      213: 1067359565602595032
+    second: "m\xE9chant-de-dos_39"
+  - first:
+      213: 1381131256618602635
+    second: "m\xE9chant-de-dos_40"
+  - first:
+      213: 6518141891747716043
+    second: "m\xE9chant-de-dos_41"
+  - first:
+      213: -3363615306029903379
+    second: "m\xE9chant-de-dos_42"
+  - first:
+      213: 5808367006918670131
+    second: "m\xE9chant-de-dos_43"
+  - first:
+      213: 680549544506111439
+    second: "m\xE9chant-de-dos_44"
+  - first:
+      213: 1138210715850215693
+    second: "m\xE9chant-de-dos_45"
+  - first:
+      213: 2023827348362153053
+    second: "m\xE9chant-de-dos_46"
+  - first:
+      213: -5915788699386351096
+    second: "m\xE9chant-de-dos_47"
+  - first:
+      213: 3584965049729347309
+    second: "m\xE9chant-de-dos_48"
+  - first:
+      213: -2441830845452407519
+    second: "m\xE9chant-de-dos_49"
+  - first:
+      213: 3993402626602616257
+    second: "m\xE9chant-de-dos_50"
+  - first:
+      213: 7330949308068709001
+    second: "m\xE9chant-de-dos_51"
+  - first:
+      213: 4308681216381581913
+    second: "m\xE9chant-de-dos_52"
+  - first:
+      213: -3545251917423351017
+    second: "m\xE9chant-de-dos_53"
+  - first:
+      213: -4475527333315560928
+    second: "m\xE9chant-de-dos_54"
+  - first:
+      213: -2715492022957525076
+    second: "m\xE9chant-de-dos_55"
+  - first:
+      213: -6292028785556362991
+    second: "m\xE9chant-de-dos_56"
+  - first:
+      213: -4630089629866125297
+    second: "m\xE9chant-de-dos_57"
+  - first:
+      213: 4327366807784406608
+    second: "m\xE9chant-de-dos_58"
+  - first:
+      213: -9129278045240246017
+    second: "m\xE9chant-de-dos_59"
+  - first:
+      213: -1290055480856184929
+    second: "m\xE9chant-de-dos_60"
+  - first:
+      213: 3739992552974683040
+    second: "m\xE9chant-de-dos_61"
+  - first:
+      213: -437295542863711738
+    second: "m\xE9chant-de-dos_62"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "m\xE9chant-de-dos_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 576
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae064f8892a5cea0800000000000000
+      internalID: -5853093364575629660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\xE9chant-de-dos_1"
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 576
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16471100f98a677f0800000000000000
+      internalID: -615118898235083679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\xE9chant-de-dos_2"
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 576
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15f2987a31350920800000000000000
+      internalID: 2955822857639359773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
