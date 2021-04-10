@@ -30,12 +30,15 @@ public class Manager : MonoBehaviour
     private float marge = 0.01f;
 
     public bool preview = false;
+    private Socles[] socleArray;
 
     [Header("UI")]
     [SerializeField] GameObject uiVictory;
     [SerializeField] float victoryDisplayTime;
     private Coroutine victory;
-    private Socles[] socleArray;
+    [SerializeField] GameObject uiGameOver;
+    [SerializeField] float gameOverDisplayTime;
+    private Coroutine gameOver;
 
     public GameObject uiPlayButton;
     [SerializeField] GameObject uiPreviewButton;
@@ -184,10 +187,10 @@ public class Manager : MonoBehaviour
     internal void Victory()
     {
         Debug.Log("VICTORY");
-        victory = StartCoroutine(displayVictoryScreen());
+        victory = StartCoroutine(DisplayVictoryScreen());
     }
 
-    public IEnumerator displayVictoryScreen()
+    public IEnumerator DisplayVictoryScreen()
     {
         uiVictory.SetActive(true);
         yield return new WaitForSeconds(victoryDisplayTime);
@@ -197,7 +200,14 @@ public class Manager : MonoBehaviour
     internal void Gameover()
     {
         Debug.Log("Game Over");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOver = StartCoroutine(DisplaygameOverScreen());
+    }
+
+    public IEnumerator DisplaygameOverScreen()
+    {
+        uiGameOver.SetActive(true);
+        yield return new WaitForSeconds(gameOverDisplayTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public bool soclesAllActives()
