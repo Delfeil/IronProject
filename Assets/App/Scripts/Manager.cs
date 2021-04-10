@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Manager : MonoBehaviour
@@ -14,11 +15,12 @@ public class Manager : MonoBehaviour
     //Lancement de signaux pour les ennemis
     public Action Play { get; set; }
     public Action Stop { get; set; }
-
+    public Action previewAction { get; set; }
 
     //Variables position des murs de la map 
     private float tailleMatrix = 8;
     public GameObject walls;
+    public GameObject damierCentral;
     public Transform transformParents;
     [SerializeField]Vector3 posFirstBrick = new Vector3(0,0,0);
     Vector3 currentPos;
@@ -27,13 +29,17 @@ public class Manager : MonoBehaviour
 
     private float marge = 0.01f;
 
-    public bool preview;
+    public bool preview = false;
 
     [Header("UI")]
     [SerializeField] GameObject uiVictory;
     [SerializeField] float victoryDisplayTime;
     private Coroutine victory;
     private Socles[] socleArray;
+
+    public GameObject uiPlayButton;
+    [SerializeField] GameObject uiPreviewButton;
+    ActionController[] arrayAllActions;
 
 
     private void Awake() //Make this a singleton
@@ -50,27 +56,64 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        preview = true;
         wallCollider = walls.GetComponent<BoxCollider>();
         sizeWallCollider = wallCollider.bounds.size.x;
         //posFirstBrick += new Vector3(wallCollider.bounds.size.x / 2, wallCollider.bounds.size.x / 2, 0);
         currentPos = posFirstBrick;
         InstantiateLevel();
-
+        uiPlayButton.SetActive(false);
         socleArray = FindObjectsOfType<Socles>();
+        arrayAllActions = FindObjectsOfType<ActionController>();
     }
 
     public void Preview()
     {
+        uiPlayButton.SetActive(false);
+        uiPreviewButton.SetActive(false);
+        desactiveAllActions();
         preview = true;
         Play?.Invoke();
         Debug.Log("Preview Launch");
+    }
+
+    public void desactiveAllActions()
+    {
+        foreach (var ActionController in arrayAllActions)
+        {
+            ActionController.gameObject.SetActive(false);
+        }
+    }
+    public void activeAllActions()
+    {
+        foreach (var ActionController in arrayAllActions)
+        {
+            ActionController.gameObject.SetActive(true);
+        }
+    }
+    public void enableDragDropOnAllActions()
+    {
+        foreach (var ActionController in arrayAllActions)
+        {
+            DragObject scriptdrag = ActionController.gameObject.GetComponent<DragObject>();
+            scriptdrag.enabled = false;
+        }
+    }
+    public void ableDragDropOnAllActions()
+    {
+        foreach (var ActionController in arrayAllActions)
+        {
+            DragObject scriptdrag = ActionController.gameObject.GetComponent<DragObject>();
+            scriptdrag.enabled = true;
+        }
     }
 
     public void Starting()
     {
         if (soclesAllActives())
         {
+            uiPreviewButton.SetActive(false);
+            uiPlayButton.SetActive(false);
+            enableDragDropOnAllActions();
             preview = false;
             Play?.Invoke();
             Debug.Log("StartSignal Launch");
@@ -82,6 +125,16 @@ public class Manager : MonoBehaviour
     }
     public void Stopping()
     {
+        uiPreviewButton.SetActive(true);
+        PlayerController.Instance.replacePlayerInitialPos();
+        ableDragDropOnAllActions();
+        activeAllActions();
+
+        if (soclesAllActives())
+        {
+            uiPlayButton.SetActive(true);
+        }
+
         Stop?.Invoke();
         Debug.Log("StopSignal Launch");
     }
@@ -124,6 +177,8 @@ public class Manager : MonoBehaviour
             currentPos += new Vector3(0, sizeWallCollider, 0);
         }
 
+        GameObject damier = Instantiate(damierCentral, transformParents);
+        damier.transform.localPosition = currentPos - new Vector3(-(sizeWallCollider * 3 + sizeWallCollider / 2), sizeWallCollider * 3 + sizeWallCollider/2, -0.1f);
     }
 
     internal void Victory()

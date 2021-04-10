@@ -48,7 +48,10 @@ public class DragObject : MonoBehaviour
     void OnMouseDrag()
 
     {
-        transform.position = GetMouseAsWorldPoint() + mOffset;
+        if (this.enabled)
+        {
+            transform.position = GetMouseAsWorldPoint() + mOffset;
+        }
     }
 
     private void OnMouseUp()

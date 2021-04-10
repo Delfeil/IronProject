@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private Collider ownCOllider;
     private float sizeCollider;
 
+    private Vector3 startingPos;
+
     private void Awake() //Make this a singleton
     {
         if (Instance == null)
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
         ownCOllider = GetComponent<BoxCollider>();
         sizeCollider = ownCOllider.bounds.size.x;
         moveFactor = sizeCollider;
+        startingPos = transform.position;
     }
 
     private void OnEnable()
@@ -109,5 +112,10 @@ public class PlayerController : MonoBehaviour
             // TODO: Implement Victory
             Manager.Instance.Victory();
         }
+    }
+
+    public void replacePlayerInitialPos()
+    {
+        transform.position = startingPos;
     }
 }

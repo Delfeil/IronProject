@@ -15,6 +15,11 @@ public class Socles : MonoBehaviour
             dragobj.posSocle = transform.position;
             Debug.Log("ENTRE DANS LE SOCLE");
             isActive = true;
+
+            if (Manager.Instance.soclesAllActives())
+            {
+                Manager.Instance.uiPlayButton.SetActive(true);
+            } 
         }
     }
     private void OnTriggerExit(Collider other)
@@ -26,6 +31,7 @@ public class Socles : MonoBehaviour
             dragobj.posSocle = dragobj.startpos;
             Debug.Log("QUITTE LE SOCLE");
             isActive = false;
+            Manager.Instance.uiPlayButton.SetActive(false);
         }
     }
 }
