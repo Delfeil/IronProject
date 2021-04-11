@@ -164,7 +164,7 @@ public class Manager : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     void InstantiateLevel()
@@ -219,7 +219,7 @@ public class Manager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         uiVictory.SetActive(true);
         yield return new WaitForSeconds(victoryDisplayTime);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     internal void Gameover()

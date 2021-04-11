@@ -49,6 +49,24 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         animator = GetComponent<Animator>();
+        Manager.Instance.Play += PlayAnim;
+        Manager.Instance.Stop += StopAnim;
+    }
+
+    private void OnDisable()
+    {
+        Manager.Instance.Play += PlayAnim;
+        Manager.Instance.Stop += StopAnim;
+    }
+
+    public void PlayAnim()
+    {
+        animator.SetTrigger("WALK");
+    }
+
+    public void StopAnim()
+    {
+        animator.SetTrigger("IDLE");
     }
 
     public void Move(MovmentType moveType)
