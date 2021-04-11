@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         ownCOllider = GetComponent<BoxCollider>();
         sizeCollider = ownCOllider.bounds.size.x;
+        Manager.Instance.Play += PlayAnim;
+        Manager.Instance.Stop += StopAnim;
         //sizeCollider = Manager.Instance.sizeWallCollider;
         moveFactor = sizeCollider;
         startingPos = transform.position;
@@ -49,14 +51,12 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         animator = GetComponent<Animator>();
-        Manager.Instance.Play += PlayAnim;
-        Manager.Instance.Stop += StopAnim;
     }
 
     private void OnDisable()
     {
-        Manager.Instance.Play += PlayAnim;
-        Manager.Instance.Stop += StopAnim;
+        Manager.Instance.Play-= PlayAnim;
+        Manager.Instance.Stop-= StopAnim;
     }
 
     public void PlayAnim()
