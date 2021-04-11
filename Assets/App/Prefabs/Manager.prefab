@@ -418,7 +418,7 @@ MonoBehaviour:
   transformParents: {fileID: 243384621}
   posFirstBrick: {x: -4.175, y: 4.29, z: 0}
   sizeWallCollider: 0
-  preview: 0
+  preview: 1
   uiVictory: {fileID: 5108572955961045563}
   victoryDisplayTime: 2
   uiGameOver: {fileID: 2642612287673082869}

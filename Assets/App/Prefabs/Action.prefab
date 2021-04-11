@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f7a45477bbd21148b08e052149897b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1526148f8c3e7941909e5eb173ac3eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movmentType: 2
-  upSprite: {fileID: 21300000, guid: 8f7a45477bbd21148b08e052149897b8, type: 3}
-  downSprite: {fileID: 21300000, guid: bd20d35309b767840809f88c8b483f88, type: 3}
-  leftSprite: {fileID: 21300000, guid: fbec2087cd6ffe04fa6a3cfbd7a9f3db, type: 3}
-  rightSprite: {fileID: 21300000, guid: 5b19e8f531f397a4a82d8fcd8aa885df, type: 3}
+  upSprite: {fileID: 21300000, guid: f1526148f8c3e7941909e5eb173ac3eb, type: 3}
+  downSprite: {fileID: 21300000, guid: 574b661d95341f6448f0b2c92033c262, type: 3}
+  leftSprite: {fileID: 21300000, guid: d02de3858e51a344f95d3e6be31c43d0, type: 3}
+  rightSprite: {fileID: 21300000, guid: c5a8596e671dd12419593391ba893599, type: 3}
 --- !u!65 &5548204915737312078
 BoxCollider:
   m_ObjectHideFlags: 0

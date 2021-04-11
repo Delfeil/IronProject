@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour
 
     private float marge = 0.01f;
 
-    public bool preview = false;
+    public bool preview = true;
     private Socles[] socleArray;
 
     [Header("UI")]
