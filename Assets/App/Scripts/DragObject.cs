@@ -58,7 +58,7 @@ public class DragObject : MonoBehaviour
     {
         if (isOnSocle)
         {
-            transform.position = new Vector3(posSocle.x, posSocle.y, -0.001f);
+            transform.position = new Vector3(posSocle.x, posSocle.y, posSocle.z - 0.001f);
         }
         else { transform.position = startpos; }
     }
