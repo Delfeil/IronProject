@@ -189,7 +189,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 89dbc6d1e356c49428b32a385be73c0a,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 90e5493526e306542ba1de0bade46369, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 60c8224f027021f478116add5f3c881d, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b96c1bda0a8c5b7469a6ba0cc30f4f8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 392f0ca3036108146b97e00c8561749d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -474,6 +474,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4643531322830976190, guid: ccab06e3dafe24f45914f885be87c490,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b1b68650be1b244ea937d96cb4d9c8b,
+        type: 3}
     - target: {fileID: 4643531322914222818, guid: ccab06e3dafe24f45914f885be87c490,
         type: 3}
       propertyPath: m_UiScaleMode
