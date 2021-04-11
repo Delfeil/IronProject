@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab7d558a515e4549af1bf809f36aa29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  play: {fileID: 8300000, guid: e36f98484f52e6948906a79359bd3b13, type: 3}
-  preview: {fileID: 8300000, guid: 6e75943688dfcdf439f10449ed33badd, type: 3}
-  stop: {fileID: 8300000, guid: a391f82b9c483e34f8ba409c044dbc58, type: 3}
+  play: {fileID: 8300000, guid: 22d2aebcad5ba5940a13ebcaf2d765e4, type: 3}
+  preview: {fileID: 8300000, guid: f477b93220647714f9234659583c0307, type: 3}
+  stop: {fileID: 8300000, guid: 9bdbb01148a664b4dacaa9333c775586, type: 3}
   victory: {fileID: 8300000, guid: 49b97bc08a1dc6c459f09795b0085264, type: 3}
   gameOver: {fileID: 8300000, guid: ce89f3dfb1840fc47b8315b4a1785109, type: 3}
   playerMove: {fileID: 8300000, guid: 28239914980a1e645a9def291a3d2a59, type: 3}
