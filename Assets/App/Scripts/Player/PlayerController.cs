@@ -74,7 +74,8 @@ public class PlayerController : MonoBehaviour
         }
         if (CanMove(dir))
         {
-            MoveToPosition(transform.position + (dir * moveFactor), moveType);
+            transform.position += (dir * moveFactor);
+            //MoveToPosition(transform.position + (dir * moveFactor), moveType);
         }
     }
 

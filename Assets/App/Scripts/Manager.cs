@@ -46,6 +46,9 @@ public class Manager : MonoBehaviour
     ActionController[] arrayAllActions;
     PointPassage[] arrayPointsPassage;
 
+    bool alreadyWin = false;
+    bool alreadyLoose = false;
+
 
     private void Awake() //Make this a singleton
     {
@@ -203,12 +206,17 @@ public class Manager : MonoBehaviour
 
     internal void Victory()
     {
-        Debug.Log("VICTORY");
-        victory = StartCoroutine(DisplayVictoryScreen());
+        if (alreadyLoose == false)
+        {
+            Debug.Log("VICTORY");
+            alreadyWin = true;
+            victory = StartCoroutine(DisplayVictoryScreen());
+        }
     }
 
     public IEnumerator DisplayVictoryScreen()
     {
+        yield return new WaitForSeconds(0.5f);
         uiVictory.SetActive(true);
         yield return new WaitForSeconds(victoryDisplayTime);
         SceneManager.LoadScene(0);
@@ -216,8 +224,12 @@ public class Manager : MonoBehaviour
 
     internal void Gameover()
     {
-        Debug.Log("Game Over");
-        gameOver = StartCoroutine(DisplaygameOverScreen());
+        if (alreadyWin == false)
+        {
+            Debug.Log("Game Over");
+            alreadyLoose = true;
+            gameOver = StartCoroutine(DisplaygameOverScreen());
+        }
     }
 
     public IEnumerator DisplaygameOverScreen()
