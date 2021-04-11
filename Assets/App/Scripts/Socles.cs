@@ -6,15 +6,18 @@ public class Socles : MonoBehaviour
 {
     public bool isActive = false;
 
+    private DragObject dragobj = null;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Action" && !isActive)
         {
-            DragObject dragobj =  other.GetComponent<DragObject>();
+            isActive = true;
+            dragobj =  other.GetComponent<DragObject>();
             dragobj.isOnSocle = true;
             dragobj.posSocle = transform.position;
             Debug.Log("ENTRE DANS LE SOCLE");
-            isActive = true;
+            
 
             if (Manager.Instance.soclesAllActives())
             {
@@ -22,18 +25,34 @@ public class Socles : MonoBehaviour
             } 
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Action")
         {
+            if (other.gameObject == dragobj.gameObject)
+            {
+                dragobj.isOnSocle = false;
+                dragobj.posSocle = dragobj.startpos;
+                Debug.Log("QUITTE LE SOCLE");
+                Manager.Instance.uiPlayButton.SetActive(false);
+                isActive = false;
+            }
+        }
+    }
+
+    /*private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Action")
+        {
             DragObject dragobj = other.GetComponent<DragObject>();
-            if (!dragobj.isOnSocle)
-                return;
+            *//*if (!dragobj.isOnSocle)
+                return;*//*
             dragobj.isOnSocle = false;
             dragobj.posSocle = dragobj.startpos;
             Debug.Log("QUITTE LE SOCLE");
-            isActive = false;
             Manager.Instance.uiPlayButton.SetActive(false);
+            isActive = false;
         }
-    }
+    }*/
 }
