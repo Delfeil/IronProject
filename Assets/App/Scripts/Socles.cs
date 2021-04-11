@@ -8,7 +8,7 @@ public class Socles : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Action")
+        if (other.tag == "Action" && !isActive)
         {
             DragObject dragobj =  other.GetComponent<DragObject>();
             dragobj.isOnSocle = true;
@@ -27,6 +27,8 @@ public class Socles : MonoBehaviour
         if (other.tag == "Action")
         {
             DragObject dragobj = other.GetComponent<DragObject>();
+            if (!dragobj.isOnSocle)
+                return;
             dragobj.isOnSocle = false;
             dragobj.posSocle = dragobj.startpos;
             Debug.Log("QUITTE LE SOCLE");
