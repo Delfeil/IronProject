@@ -51,6 +51,7 @@ MonoBehaviour:
   gameOver: {fileID: 8300000, guid: ce89f3dfb1840fc47b8315b4a1785109, type: 3}
   playerMove: {fileID: 8300000, guid: 28239914980a1e645a9def291a3d2a59, type: 3}
   ennemyMove: {fileID: 8300000, guid: 2f6f32887c8739c4ba6a23ce6e60a965, type: 3}
+  activateButton: {fileID: 8300000, guid: 0134e7b6fc8b3f24d93557117d453ec2, type: 3}
 --- !u!82 &3328815735827011253
 AudioSource:
   m_ObjectHideFlags: 0

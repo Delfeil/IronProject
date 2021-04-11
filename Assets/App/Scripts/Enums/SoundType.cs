@@ -10,5 +10,6 @@ public enum SoundType
     Victory,
     GameOver,
     PlayerMove,
-    EnnemyMove
+    EnnemyMove,
+    ActivateButton
 }

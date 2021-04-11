@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] public AudioClip gameOver;
     [SerializeField] public AudioClip playerMove;
     [SerializeField] public AudioClip ennemyMove;
+    [SerializeField] public AudioClip activateButton;
     AudioSource audioSource;
 
     public static AudioManager Instance;
@@ -55,6 +56,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case SoundType.EnnemyMove:
                 audioSource.PlayOneShot(ennemyMove);
+                break;
+            case SoundType.ActivateButton:
+                audioSource.PlayOneShot(activateButton);
                 break;
         }
     }
