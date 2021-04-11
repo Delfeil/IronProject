@@ -17,9 +17,12 @@ public class Ennemy : MonoBehaviour
 
     Animator animator;
 
+    AudioSource audioSource;
+
     private void OnEnable()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         animator.SetTrigger("IDLE");
     }
 
@@ -59,6 +62,7 @@ public class Ennemy : MonoBehaviour
         transform.position = StartingGameObject.transform.position;
         currentGameObject = StartingGameObject;
         animator.SetTrigger("IDLE");
+        audioSource.Stop();
         Debug.Log("Stop Function");
     }
 
@@ -66,6 +70,7 @@ public class Ennemy : MonoBehaviour
     {
         canMove = true;
         animator.SetTrigger("MOVE");
+        audioSource.Play();
         Debug.Log("Play Function");
     }
 }

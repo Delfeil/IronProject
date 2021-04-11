@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if (CanMove(dir))
         {
             transform.position += (dir * moveFactor);
+            AudioManager.Instance.PlaySound(SoundType.PlayerMove);
             //MoveToPosition(transform.position + (dir * moveFactor), moveType);
         }
     }
