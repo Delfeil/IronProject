@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class Manager : MonoBehaviour
 {
 
@@ -49,7 +48,12 @@ public class Manager : MonoBehaviour
     bool alreadyWin = false;
     bool alreadyLoose = false;
 
-
+    //[Header("sounds")]
+    //[SerializeField] AudioExpress playSound;
+    //[SerializeField] AudioExpress previewSound;
+    //[SerializeField] AudioExpress stopSound;
+    //[SerializeField] AudioExpress gameOverSound;
+    //[SerializeField] AudioExpress winSound;
     private void Awake() //Make this a singleton
     {
         if(Instance == null)
@@ -93,6 +97,9 @@ public class Manager : MonoBehaviour
         uiPreviewButton.SetActive(false);
         desactiveAllActions();
         preview = true;
+        AudioManager.Instance.PlaySound(SoundType.Preview);
+
+        //previewSound.Play();
         Play?.Invoke();
         Debug.Log("Preview Launch");
     }
@@ -137,6 +144,8 @@ public class Manager : MonoBehaviour
             uiPlayButton.SetActive(false);
             enableDragDropOnAllActions();
             preview = false;
+            AudioManager.Instance.PlaySound(SoundType.Play);
+            //playSound.&);
             Play?.Invoke();
             Debug.Log("StartSignal Launch");
         }
@@ -157,7 +166,9 @@ public class Manager : MonoBehaviour
         {
             uiPlayButton.SetActive(true);
         }
+        AudioManager.Instance.PlaySound(SoundType.Stop);
 
+        //stopSound.Play();        
         Stop?.Invoke();
         Debug.Log("StopSignal Launch");
     }
@@ -206,10 +217,13 @@ public class Manager : MonoBehaviour
 
     internal void Victory()
     {
-        if (alreadyLoose == false)
+        if (alreadyLoose == false && !alreadyWin)
         {
             Debug.Log("VICTORY");
             alreadyWin = true;
+            AudioManager.Instance.PlaySound(SoundType.Victory);
+
+            //winSound.Play();
             victory = StartCoroutine(DisplayVictoryScreen());
         }
     }
@@ -224,10 +238,13 @@ public class Manager : MonoBehaviour
 
     internal void Gameover()
     {
-        if (alreadyWin == false)
+        if (alreadyWin == false && !alreadyLoose)
         {
             Debug.Log("Game Over");
             alreadyLoose = true;
+            AudioManager.Instance.PlaySound(SoundType.GameOver);
+
+            //gameOverSound.Play();
             gameOver = StartCoroutine(DisplaygameOverScreen());
         }
     }

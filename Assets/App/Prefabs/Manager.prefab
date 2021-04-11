@@ -523,6 +523,86 @@ MonoBehaviour:
   uiPlayButton: {fileID: 20322670908569322}
   uiPreviewButton: {fileID: 560105874724490409}
   uiStopButton: {fileID: 20322672095519744}
+  playSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: e36f98484f52e6948906a79359bd3b13, type: 3}
+    clips: []
+    mixerGroup: {fileID: 943951946138745536, guid: 0975feb9f99905943810734987d1d2d1,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
+  previewSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 6e75943688dfcdf439f10449ed33badd, type: 3}
+    clips: []
+    mixerGroup: {fileID: 943951946138745536, guid: 0975feb9f99905943810734987d1d2d1,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
+  stopSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: a391f82b9c483e34f8ba409c044dbc58, type: 3}
+    clips: []
+    mixerGroup: {fileID: 943951946138745536, guid: 0975feb9f99905943810734987d1d2d1,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
+  gameOverSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: ce89f3dfb1840fc47b8315b4a1785109, type: 3}
+    clips: []
+    mixerGroup: {fileID: 943951946138745536, guid: 0975feb9f99905943810734987d1d2d1,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
+  winSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 49b97bc08a1dc6c459f09795b0085264, type: 3}
+    clips: []
+    mixerGroup: {fileID: 943951946138745536, guid: 0975feb9f99905943810734987d1d2d1,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
 --- !u!1 &20322672095519744
 GameObject:
   m_ObjectHideFlags: 0
