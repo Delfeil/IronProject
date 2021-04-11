@@ -11,7 +11,6 @@ public class PointPassage : MonoBehaviour
         if (other.tag == "Ennemy")
         {
 
-            Debug.Log("change DIRECTION");
             Ennemy comp = other.GetComponent<Ennemy>();
             other.transform.position = transform.position;
             comp.currentGameObject = nextPointPassage;
